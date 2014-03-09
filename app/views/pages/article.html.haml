@@ -1,0 +1,10 @@
+.article.col-xs-12.col-sm-8.col-sm-offset-2
+  %h1= Faker::Lorem.sentence
+  %p.date= "Published #{Chronic.parse('today')} by #{Faker::Name.name}" 
+  - rand(5..10).times do
+    %p= Faker::Lorem.paragraph(rand(3..8))
+  %hr
+  %p.shareable
+    = link_to fa_icon('twitter'), '#'
+    = link_to fa_icon('facebook'), '#'
+    = link_to fa_icon('envelope'), '#'

@@ -1,0 +1,19 @@
+/ FEATURE ITEMS
+#features.container
+  .col-xs-12.col-md-9.col-md-offset-2.col-lg-8.col-lg-8.col-lg-offset-2
+    .col-xs-12.col-sm-4.feature-item
+      = image_tag 'http://beyondchronic.com/wp-content/uploads/2013/04/mime-attachment_5-230x130.jpg', width: '100%'
+    .col-xs-12.col-sm-4.feature-item
+      = image_tag 'http://mitacarts.com/wp-content/uploads/2013/03/IMG_7778-230x130.jpg', width: '100%'
+    .col-xs-12.col-sm-4.feature-item
+      = image_tag 'http://static.arstechnica.com/assets/2009/04/gears-thumb-230x130-4630-f.jpg', width: '100%'
+
+/ ARTICLE LIST
+#article-list.container
+  .col-xs-12.col-md-8.col-md-offset-2
+    .container
+      - 20.times do
+        .article
+          %h1= Faker::Lorem.sentence
+          %p= Faker::Lorem.paragraph.truncate(100)
+          %p.date= "Published #{Chronic.parse('today')} by #{Faker::Name.name}" 

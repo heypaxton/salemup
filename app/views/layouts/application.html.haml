@@ -1,0 +1,24 @@
+!!! 5
+%html
+  %head
+    %title SalemUp!
+    %meta{charset:"utf-8"}
+    %meta{"http-equiv" => "X-UA-Compatible", content:"IE=edge"}
+    %meta{name:"viewport", content:"width=device-width, initial-scale=1"}
+    != stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+    != javascript_include_tag "application", "data-turbolinks-track" => true
+    != csrf_meta_tags
+
+  %body
+    / HEADER
+    #header
+      .col-xs-2
+        = link_to fa_icon('bars'), '#'
+      .col-xs-8.brand
+        = link_to 'SalemUp!', page_path('home'), class: 'brand'
+      .col-xs-2
+        %ul.social
+          %li= link_to fa_icon('facebook'), '#'
+          %li= link_to fa_icon('twitter'), '#'
+
+  = yield
