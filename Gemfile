@@ -31,6 +31,7 @@ gem "simple_form", git: "https://github.com/plataformatec/simple_form"
 gem "uuidtools"
 gem "faker"
 gem "chronic"
+gem "simple-rss"
 
 group :development do
   gem "rspec-rails"
